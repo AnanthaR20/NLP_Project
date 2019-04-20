@@ -4,7 +4,7 @@ data.test <- read.csv("test_Madison.csv")
 data.train <- read.csv("train_Madison.csv")
 attach(data.train)
 
-model <- lm(star ~ data.train)
+model <- lm(star ~ postal_code + incredible + awful + amazing + poor + waited + disappointed + city)
 
 star1 <- which(star == 1)
 star2 <- which(star == 2)
