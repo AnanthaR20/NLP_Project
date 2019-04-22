@@ -7,11 +7,13 @@ d <- data.train
 
 model <- lm(star ~ postal_code + incredible + awful + amazing + poor + waited + disappointed + city)
 
-star1 <- which(star == 1)
-star2 <- which(star == 2)
-star3 <- which(star == 3)
-star4 <- which(star == 4)
-star5 <- which(star == 5)
+#Search
+cities <- factor(d$city)
+
+region.dist <- table(cities, star)
+
+
+
 
 
 
