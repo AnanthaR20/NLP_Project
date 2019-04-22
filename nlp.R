@@ -5,7 +5,7 @@ d <- data.train
 attach(d)
 
 
-model <- lm(star ~ postal_code + incredible + awful + amazing + poor + waited + disappointed + city)
+model <- lm(star ~ city + postal_code + incredible + awful + amazing + poor + waited + disappointed + city)
 
 #Search
 cities <- factor(d$city)
@@ -22,5 +22,4 @@ for(town in 1:nrow(region)){
   city.rating[town,2] <- no.med/no.total
   city.rating[town,3] <- no.good/no.total
 }
-
 
